@@ -7,33 +7,43 @@ import javax.persistence.Id;
 
 @Entity
 public class Produto {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	private String nome;
-	private Double preco;
+    // Define a chave primária para a entidade.
+    @Id
+    // Especifica que o ID será gerado automaticamente pelo banco.
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-	public Long getId() {
-		return id;
-	}
+    // Declara os atributos do produto.
+    private String nome;
+    private Double preco;
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    // Método getter para chamar o ID do produto.
+    public Long getId() {
+        return id;
+    }
 
-	public String getNome() {
-		return nome;
-	}
+    // Método setter para definir o ID do produto.
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+    // Método getter para chamar o nome do produto.
+    public String getNome() {
+        return nome;
+    }
 
-	public Double getPreco() {
-		return preco;
-	}
+    // Método setter para definir o nome do produto.
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
-	public void setPreco(Double preco) {
-		this.preco = preco;
-	}
+    // Método getter para chamar o preço do produto.
+    public Double getPreco() {
+        return preco;
+    }
+
+    // Método setter para definir o preço do produto.
+    public void setPreco(Double preco) {
+        this.preco = preco;
+    }
 }
